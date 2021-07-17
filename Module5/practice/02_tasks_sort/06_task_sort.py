@@ -13,3 +13,21 @@
 # 70
 # Пояснение:
 # Возможен такой порядок: 10 2 50 1 10
+
+def gen_list(size, at=0, to=100):
+    """
+    :param size: кол-во элементов списка
+    :param at: минимально возможное значение элементов
+    :param to: максимально возможное значение элементов
+    :return: список из size произвольных элементов в диапазоне at..to 
+    """
+    import random
+    num_list = []
+    for _ in range(size):
+        num_list.append(random.randint(at, to))
+    return num_list
+
+price = gen_list(1000)
+price.sort(reverse = True)
+half_index = len(price)//2
+print(sum(price[-half_index:]))
