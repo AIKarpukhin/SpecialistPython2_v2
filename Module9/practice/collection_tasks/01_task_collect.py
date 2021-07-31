@@ -3,6 +3,13 @@
 # от шифра Цезаря до шифровальной машины «Энигма».
 # Выполним простой частотный анализ: выясним, какой символ чаще всего
 # встречается в данном тексте.
+import collections
+c = collections.Counter()
+
+for word in ['uhwufehsuwreuftVYyv', 'grfrg', 'gehgh']:
+    c[word] += 1
+
+print(c['grfrg'])
 
 # Входные данные:
 # Произвольный текст
